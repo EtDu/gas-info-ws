@@ -17,7 +17,8 @@ import {
   SECONDS,
   ETH_PRICE_DATA,
   GAS_PRICE_DATA,
-  INTERVAL_TICK
+  INTERVAL_TICK,
+  LAST_BLOCK
 } from "../utils/strings"
 import { formatNumber } from "../utils/utils"
 
@@ -52,6 +53,7 @@ export default function Home() {
           <h1 className="text-2xl font-bold text-gray-800">{LIVE_ETH_PRICE}</h1>
           <p className="text-lg text-gray-600">{DOLLAR_SIGN}{formatNumber(ethPrice.price)} {USD}</p>
         </section>
+        <p className="text-lg font-semibold text-gray-700 mb-4 mt-4">{LAST_BLOCK} {gasPrices.lastBlock}</p>
         <section>
           <h2 className="text-xl font-semibold text-gray-800 mb-2">{LIVE_ETH_GAS_PRICES} ({GWEI})</h2>
           <div className="grid grid-cols-2 gap-4">

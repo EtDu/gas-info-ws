@@ -14,6 +14,7 @@ const GAS_PRICE_CHANGED: string = "ethereumGasPriceDataChanged"
 const ETH_PRICE_DATA: string = "ethereumPriceData"
 const GAS_PRICE_DATA: string = "ethereumGasPriceData"
 const INTERVAL_TICK: string = "intervalTick"
+const LAST_BLOCK: string = "Last Block:"
 
 export {
   LIVE_ETH_PRICE,
@@ -31,5 +32,6 @@ export {
   GAS_PRICE_CHANGED,
   ETH_PRICE_DATA,
   GAS_PRICE_DATA,
-  INTERVAL_TICK
+  INTERVAL_TICK,
+  LAST_BLOCK
 }
