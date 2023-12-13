@@ -3,7 +3,7 @@
 1) Setup Environment Variables:
 
 The server .env file --> `server/.env`:
-- PUBLIC_URL should be a domain like `https://mydomain.com` for production, use `http://localhost:3000` for dev, this points to the origin for requests, which is mostly the user's browser
+- PUBLIC_URL should be a domain like `https://mydomain.com` for production, use `http://localhost:3000` for dev, this points to the origin for requests, which is mostly the user's browser.
 
 ```
 ETHERSCAN_API_KEY=
@@ -11,7 +11,7 @@ PUBLIC_URL=
 ```
 
 The Next.JS app .env file --> `.env`
-- PUBLIC_URL should be a domain like `https://mydomain.com` for production, use `http://localhost:3001` for dev, this points to the backend for initiating the socket connection
+- PUBLIC_URL should be a domain like `https://mydomain.com` for production, use `http://localhost:3001` for dev, this points to the backend for initiating the socket connection.
 
 ```
 NEXT_PUBLIC_URL=""
