@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 
-import { EthereumPriceData, EthereumGasPriceData } from "../types/dataTypes"
+import { EthereumPriceData, EthereumGasPriceData } from "../utils/dataTypes"
 import useEthereumDataStream from '../hooks/useEthereumDataStream';
 import {
   LIVE_ETH_PRICE,
@@ -27,21 +27,18 @@ export default function Home() {
   const [gasPrices, setGasPrices] = useState<EthereumGasPriceData>({ slow: "0", med: "0", fast: "0", base: "0", lastBlock: "0" });
   const [timeToUpdate, setTimeToUpdate] = useState(0)
 
-  const dataStream = useEthereumDataStream(process.env.NEXT_PUBLIC_BE_URL || "");
+  const dataStream = useEthereumDataStream(process.env.NEXT_PUBLIC_URL || "");
 
   useEffect(() => {
     if (dataStream) {
       dataStream.on(ETH_PRICE_DATA, (priceData: EthereumPriceData) => {
         setEthPrice(priceData)
-        console.log(priceData);
       });
       dataStream.on(GAS_PRICE_DATA, (gasPriceData: EthereumGasPriceData) => {
         setGasPrices(gasPriceData)
-        console.log(gasPriceData);
       });
       dataStream.on(INTERVAL_TICK, (intervalTick: number) => {
         setTimeToUpdate(intervalTick)
-        console.log(intervalTick);
       });
     }
   }, [dataStream]);
