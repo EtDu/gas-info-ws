@@ -5,7 +5,7 @@ import {
   EthereumGasPriceData,
   EtherscanPriceResponse,
   EtherscanGasPriceResponse
-} from "../src/types/dataTypes"
+} from "./utils/types"
 
 export default class DataStore extends EventEmitter {
   ethereumPriceData: EthereumPriceData | null;
